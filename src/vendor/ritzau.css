@@ -1,0 +1,195 @@
+.bg-white-blur {
+	background-color: rgba(255,255,255,0.7);
+	-webkit-backdrop-filter: blur(1rem);
+	backdrop-filter: blur(1rem);
+}
+.bg-silver-blur {
+	background-color: #E5E9ECB3;
+	-webkit-backdrop-filter: blur(1rem);
+	backdrop-filter: blur(1rem);
+}
+
+.bg-primary-blur {
+	background-color: #002b4be0;
+	-webkit-backdrop-filter: blur(1rem);
+	backdrop-filter: blur(1rem);
+}
+
+.font-weight-500 {
+	font-weight:500;
+}
+
+.ritzau-collapse {
+  top: 3.5rem;
+  bottom: 0;
+  width: 24rem;
+  max-width: 100%;
+  z-index: 1019;
+}
+
+.rounded-right-0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.rounded-left-0 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+.ritzau-collapse-right {
+	right: 0;
+	width:19rem;
+	top: 3.5rem;
+	bottom:0;
+}
+.ritzau-collapse-left {
+	left:0;
+	width:19rem;
+	top: 3.5rem;
+	bottom:0;
+}
+
+.collapse-toggle:before {
+	transition: transform 0.4s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+	display: block;
+}
+[data-toggle='collapse'][aria-expanded='true'] .collapse-toggle:before {
+	transform: rotate(180deg);
+}
+
+.dropdown-toggle::after {
+  transition: transform 0.4s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+.dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg);
+}
+
+
+.dropdown-divider {
+	margin: 0;
+}
+
+.sp-collection-gradient {
+	-webkit-transition: background 200ms ease-in-out 300ms;
+	-moz-transition: background 20ms ease-in-out 300ms;
+	-o-transition: background 20ms ease-in-out 300ms;
+	transition: background 200ms ease-in-out 300ms;
+}
+
+.sp-collection-gradient::after {
+	display: block;
+	position: absolute;
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+}
+
+.sp-collection:hover > .sp-collection-gradient::after {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,1) 100%);
+}
+
+.navbar-nav .nav-item.active, .navbar-nav .nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.navbar-nav .nav-item:hover, .navbar-nav .nav-link:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.nav-tabs .nav-link {
+	border: none;
+}
+
+.nav-tabs .nav-link.active {
+	border-bottom: 3px solid;
+	background-color: transparent;
+}
+
+
+/*
+   Skal laves rigtigt i _modal.scss
+*/
+
+/* classes specific for Nyhed and T&S for Checkbox and Switches */
+.list-group-item{
+	background-color:var(--light);
+}
+/** overwriting of checkbox */
+.custom-control-label::before{
+	background-color:var(--light);
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+	background-color: var(--secondary);
+	border-color: var(--secondary);
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23002b4b' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+}
+
+
+/** this disabled works for all i.e., checkbox, switch and radio button*/
+.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
+	color: var(--dark);
+	opacity:0.4;
+	cursor:not-allowed;
+}
+
+/** overwriting of Switches */
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+	color: #fff;
+	border-color: #002b4b;
+	background-color: #002b4b;
+}
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after{
+	background-color:var(--secondary);
+}
+
+/** overwriting of the radio button */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+	color: #fff;
+	border-color: var(--secondary);
+	background-color: var(--secondary);
+}
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23002b4b'/%3e%3c/svg%3e");
+}
+
+/** END of customiztion of checkox, switches ends*/
+.modal-xxxl {
+	max-width: calc(100% - 1rem);
+}
+
+.modal-fluid {
+	width: 100%;
+	max-width: calc(100% - 1rem);
+}
+
+@media (min-width: 992px) {
+	.modal-xxl {
+	    max-width: 800px;
+	}
+}
+@media (min-width: 1200px) {
+	.modal-xxl {
+		 max-width: 1140px;
+	}
+	.modal-xxxl {
+		 max-width: 1190px;
+	}
+}
+@media (min-width: 1440px) {
+    .modal-xxl {
+        max-width:1380px
+    }
+    .modal-xxxl {
+        max-width:1380px
+    }
+}
+
+.form-control:focus {
+	border-color: #002b4b;
+}
+
