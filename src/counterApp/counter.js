@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-import {increment, decrement, incrementByAmount} from './counterSlice'
+import {increment, decrement} from '../redux/counterSlice'
 import {Button} from 'react-bootstrap'
 
 export function Counter(){
