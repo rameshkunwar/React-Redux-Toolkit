@@ -1,4 +1,6 @@
-# Create React App with Redux Toolkit (installed separately) for learning purpose
+## This project uses CRA with Redux-Toolkit (installed separately).
+
+### Warning: This project uses Redux unnecessarily. Sole purpose of this project is to try Redux-Toolkit.
 
 ## Need API key for http://www.omdbapi.com/ to search movies
 
