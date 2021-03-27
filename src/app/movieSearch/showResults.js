@@ -1,27 +1,29 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { movieResultsSlice } from "../../redux/movieResultsSlice";
+import MovieSearchResults from "./searchResults";
 
-const API_KEY = process.env.REACT_APP_RAPID_API_IMDB_KEY;
-const API_URL = "https://movie-database-imdb-alternative.p.rapidapi.com/";
-const API_HOST = "movie-database-imdb-alternative.p.rapidapi.com";
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+const IMDB_ID = process.env.REACT_APP_IMDB_ID;
+const API_URL = "http://www.omdbapi.com/";
 
 const ShowMovieSearchResults = () => {
   const { searchString } = useSelector((state) => state.search);
-
-  const [searchWord, setSearchWord] = useState("");
+  const dispatch = useDispatch();
+  const actions = movieResultsSlice.actions;
 
   useEffect(() => {
-    if (searchString && searchString !== searchWord) {
+    if (searchString) {
       //let's make an api call to get results
       getMoviesInfo(searchString)
         .then((res) => {
           console.log(res);
-          // setSearchWord(searchString);
+          dispatch(actions.update(res.data.Search));
         })
         .catch((err) => {
           console.error(err);
-          // setSearchWord(searchString);
+          dispatch(actions.update([]));
         });
     }
 
@@ -29,24 +31,23 @@ const ShowMovieSearchResults = () => {
   }, [searchString]);
 
   const getMoviesInfo = (searchStr) => {
+    const fullUrl = `${API_URL}?i=${IMDB_ID}&apikey=${API_KEY}`;
     const options = {
       method: "GET",
-      url: API_URL,
+      url: fullUrl,
       params: { s: searchStr, page: "1", r: "json" },
-      headers: {
-        "x-rapidapi-key": API_KEY,
-        "x-rapidapi-host": API_HOST,
-      },
     };
     return axios.request(options);
   };
 
   return (
-    <div className='search-result-container'>
-      <div className='search-string'>
-        <h3>{searchWord}</h3>
+    <div className='movie-column d-flex bg-light m-3'>
+      <div className='search-result-container'>
+        <div className='search-string'>
+          <h3>{searchString}</h3>
+        </div>
+        <MovieSearchResults />
       </div>
-      <div className='search-results'>here comes results</div>
     </div>
   );
 };
