@@ -7,8 +7,10 @@
 1. Go here and get an API key sent to your mail. http://www.omdbapi.com/apikey.aspx
 2. Create a **.env** file in your project root directory (along with package.json)
 3. Add these two lines (the last line is optional)
-   REACT_APP_OMDB_API_KEY = YOUR_API_KEY
-   REACT_APP_IMDB_ID = IMDB_ID
+   ```javascript
+   REACT_APP_OMDB_API_KEY = YOUR_API_KEY;
+   REACT_APP_IMDB_ID = IMDB_ID;
+   ```
 
 NB: It's very important to have **REACT*APP*** in the beginning or else React cannot find it in runtime. IMDB_ID comes along with the API key.
 
