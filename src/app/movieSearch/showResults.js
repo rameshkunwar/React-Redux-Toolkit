@@ -20,10 +20,13 @@ const ShowMovieSearchResults = () => {
         .then((res) => {
           console.log(res);
           dispatch(actions.update(res.data.Search));
+          //can also be done by  dispatch(update(res.data.Search))
+          //by using import { update } from "../../redux/movieResultsSlice";
         })
         .catch((err) => {
           console.error(err);
           dispatch(actions.update([]));
+          //can also be done by  dispatch(update(res.data.Search))
         });
     }
 
