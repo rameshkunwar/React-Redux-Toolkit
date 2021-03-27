@@ -1,6 +1,6 @@
 ## This project uses CRA with Redux-Toolkit (installed separately).
 
-### Warning: This project uses Redux unnecessarily. Sole purpose of this project is to try Redux-Toolkit.
+> Warning: This project uses Redux unnecessarily. Sole purpose of this project is to try Redux-Toolkit.
 
 ### This project uses API key from http://www.omdbapi.com/ to search movies.
 
