@@ -7,11 +7,10 @@
 1. Go here and get an API key sent to your mail. http://www.omdbapi.com/apikey.aspx
 2. Create a **.env** file in your project root directory (along with package.json)
 3. Add these two lines (the last line is optional)
+   REACT_APP_OMDB_API_KEY = YOUR_API_KEY
+   REACT_APP_IMDB_ID = IMDB_ID
 
-````REACT_APP_OMDB_API_KEY = YOUR_API_KEY
-REACT_APP_IMDB_ID = IMDB_ID```
-
-NB: It's very important to have **REACT_APP_** in the beginning or else React cannot find it in runtime. IMDB_ID comes along with the API key.
+NB: It's very important to have **REACT*APP*** in the beginning or else React cannot find it in runtime. IMDB_ID comes along with the API key.
 
 ## Read below to install and run the project. You can also use **npm**.
 
@@ -85,4 +84,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-````
+
+```
+
+```
