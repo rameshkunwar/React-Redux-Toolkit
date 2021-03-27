@@ -2,7 +2,7 @@
 
 ### Warning: This project uses Redux unnecessarily. Sole purpose of this project is to try Redux-Toolkit.
 
-## Need API key for http://www.omdbapi.com/ to search movies
+### This project uses API key from http://www.omdbapi.com/ to search movies.
 
 1. Go here and get an API key sent to your mail. http://www.omdbapi.com/apikey.aspx
 2. Create a **.env** file in your project root directory (along with package.json)
@@ -12,13 +12,13 @@
    REACT_APP_IMDB_ID = IMDB_ID;
    ```
 
-NB: It's very important to have **REACT*APP*** in the beginning or else React cannot find it in runtime. IMDB_ID comes along with the API key.
+NB: It's very important to have ** `_REACT_APP_` ** in the beginning or else React cannot find it in runtime. IMDB_ID comes along with the API key.
 
 ## Read below to install and run the project. You can also use **npm**.
 
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
